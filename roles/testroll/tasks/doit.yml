@@ -1,0 +1,12 @@
+- name: user
+  sudo_user: root
+  user: name=testuser
+
+- name: implicit sudo user directory
+  file: path=/home/testuser/implicit_sudo_user
+        state=directory
+
+- name: explicit sudo user directory
+  file: path=/home/testuser/explicit_sudo_user
+        state=directory
+  sudo_user: testuser

@@ -1,0 +1,5 @@
+- name: test box
+  hosts: all
+  sudo: true
+  roles:
+    - testroll
